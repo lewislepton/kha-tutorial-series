@@ -7,4 +7,4 @@ you can find the playlist for the tutorial series [HERE](https://www.youtube.com
 
 have phün & happy coding
 
-![lewis lepton](http://lewislepton.com)
+[lewis lepton](http://lewislepton.com)
