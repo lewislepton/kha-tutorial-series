@@ -15,7 +15,7 @@ class Project {
 		
 		// audioChannel = Audio.play(sound, true);
 		
-		audioChannel = Audio.play(Assets.sounds.tone);
+		audioChannel = Audio.play(Assets.sounds.beat, true);
 	}
 
 	public function update():Void {		
