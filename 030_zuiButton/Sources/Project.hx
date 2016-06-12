@@ -1,0 +1,44 @@
+package;
+
+import kha.Framebuffer;
+import kha.Assets;
+import kha.graphics2.Graphics;
+import kha.Color;
+
+import zui.Zui;
+import zui.Id;
+
+class Project {
+	public var ui:Zui;
+	public var button:Bool;
+	
+	public function new() {
+		ui = new Zui(Assets.fonts.Abel_Regular, 32);
+	}
+
+	public function update():Void {
+		
+	}
+
+	public function render(framebuffer:Framebuffer):Void {
+		var graphics = framebuffer.g2;
+		graphics.begin();
+		
+		if (button){
+			trace('BUTTON HAS BEEN PRESSED');
+		}
+		
+		graphics.end();
+		gui(graphics);
+	}
+	
+	public function gui(graphics:Graphics){
+		ui.begin(graphics);
+		if (ui.window(Id.window(), 0, 0, 300, 300)){
+			if (ui.node(Id.node(), 'node', 0, true)){
+				button = ui.button('BUTTON');
+			}
+		}
+		ui.end();
+	}
+}
