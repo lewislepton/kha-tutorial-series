@@ -1,4 +1,4 @@
-var project = new Project('037_playerMovementDelta');
+let project = new Project('037_playerMovementDelta');
 project.addAssets('Assets/**');
 project.addSources('Sources');
-return project;
+resolve(project);

@@ -1,4 +1,4 @@
-var project = new Project('017_translate');
+let project = new Project('017_translate');
 project.addAssets('Assets/**');
 project.addSources('Sources');
-return project;
+resolve(project);

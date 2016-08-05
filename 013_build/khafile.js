@@ -1,4 +1,4 @@
-var project = new Project('013_build');
+let project = new Project('013_build');
 project.addAssets('Assets/**');
 project.addSources('Sources');
-return project;
+resolve(project);

@@ -1,4 +1,4 @@
-var project = new Project('036_deltaTime');
+let project = new Project('036_deltaTime');
 project.addAssets('Assets/**');
 project.addSources('Sources');
-return project;
+resolve(project);

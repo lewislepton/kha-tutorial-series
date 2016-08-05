@@ -1,5 +1,5 @@
-var project = new Project('031_zuiToggle');
+let project = new Project('031_zuiToggle');
 project.addAssets('Assets/**');
 project.addSources('Sources');
 project.addLibrary('zui');
-return project;
+resolve(project);

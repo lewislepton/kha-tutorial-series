@@ -1,4 +1,4 @@
-var project = new Project('026_scissor');
+let project = new Project('026_scissor');
 project.addAssets('Assets/**');
 project.addSources('Sources');
-return project;
+resolve(project);

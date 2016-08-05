@@ -1,4 +1,4 @@
-var project = new Project('012_gamepad');
+let project = new Project('012_gamepad');
 project.addAssets('Assets/**');
 project.addSources('Sources');
-return project;
+resolve(project);

@@ -1,4 +1,4 @@
-var project = new Project('020_playerMovement');
+let project = new Project('020_playerMovement');
 project.addAssets('Assets/**');
 project.addSources('Sources');
-return project;
+resolve(project);
