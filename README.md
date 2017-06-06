@@ -10,8 +10,6 @@ PATREON
 if you like the work done for this series [plus others], there is a [PATREON](https://www.patreon.com/lewislepton) available which helps support & keep the channel alive.<br>
 the patreon is not just for code, but in the future for other such awesome things we can do. you can head to the [PATREON HERE](https://www.patreon.com/lewislepton)
 
-onyl 1 tier exists, because i would like to keep things simple. you can give more if you so wish ;)
-
 new videos are put up as much as possible. i try to stay with tuesday & thursday releases
 
 have phün & happy coding
