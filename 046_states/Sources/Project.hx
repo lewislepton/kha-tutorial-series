@@ -45,11 +45,10 @@ class Project {
 		graphics.end();
 	}
 
-	public function onKeyDown(key:Key, char:String){
-		switch (key){
-			case CHAR:
-			if (char == 'b') setBlueState();
-			if (char == 'r') setRedState();
+	public function onKeyDown(keyCode:Int){
+		switch (keyCode){
+			case KeyCode.B: setBlueState();
+			case KeyCode.R: setRedState();
 		default: return;
 		}
 	}

@@ -4,7 +4,6 @@ import kha.Framebuffer;
 using kha.graphics2.GraphicsExtension;
 import kha.Color;
 import kha.Assets;
-import kha.Key;
 import kha.input.Keyboard;
 
 import nape.space.Space;
@@ -43,11 +42,11 @@ class Project {
 		graphics.end();
 	}
 
-	public function onKeyDown(key:Key, char:String){
-		rect02.onKeyDown(key, char);
+	public function onKeyDown(keyCode:Int){
+		rect02.onKeyDown(keyCode);
 	}
 
-	public function onKeyUp(key:Key, char:String){
-		rect02.onKeyUp(key, char);
+	public function onKeyUp(keyCode:Int){
+		rect02.onKeyUp(keyCode);
 	}
 }

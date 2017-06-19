@@ -3,7 +3,7 @@ package;
 import kha.Framebuffer;
 import kha.Color;
 import kha.Assets;
-import kha.Key;
+import kha.input.KeyCode;
 import kha.input.Keyboard;
 import kha.input.Mouse;
 
@@ -59,11 +59,10 @@ class Project {
 		}
 	}
 
-	public function onKeyDown(key:Key, char:String){
-		switch (key){
-			case CHAR:
-			if (char == 'b') setBlueState();
-			if (char == 'r') setRedState();
+	public function onKeyDown(keyCode:Int){
+		switch (keyCode){
+			case KeyCode.B: setBlueState();
+			case KeyCode.R: setRedState();
 		default: return;
 		}
 	}

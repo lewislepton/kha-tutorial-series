@@ -1,7 +1,7 @@
 package;
 
 import kha.Framebuffer;
-import kha.Key;
+import kha.input.KeyCode;
 import kha.input.Keyboard;
 
 class Project {
@@ -17,22 +17,20 @@ class Project {
 		
 	}
 	
-	public function onKeyDown(key:Key, char:String):Void {
+	public function onKeyDown(keyCode:Int):Void {
 		switch (key){
-			case UP: trace('the UP key is pressed');
-			case DOWN: trace('the DOWN key is pressed');
-			
-			case CHAR: if (char == 'a') trace('the A key is pressed');
+			case KeyCode.Up: trace('the UP key is pressed');
+			case KeyCode.Down: trace('the DOWN key is pressed');
+			case KeyCode.A: trace('the A key is pressed');
 		default: return;
 		}
 	}
 	
 	public function onKeyUp(key:Key, char:String):Void {
 		switch (key){
-			case UP: trace('the UP key is not pressed');
-			case DOWN: trace('the DOWN key is not pressed');
-			
-			case CHAR: if (char == 'a') trace('the A key is not pressed');
+			case KeyCode.Up: trace('the UP key is not pressed');
+			case KeyCode.Down: trace('the DOWN key is not pressed');
+			case KeyCode.A: trace('the A key is not pressed');
 		default: return;
 		}
 	}
