@@ -52,7 +52,7 @@ class Project {
 		graphics.end();
 	}
 
-	public function onKeyDown(keyCode:Int){
+	public function onKeyDown(keyCode:KeyCode){
 		switch (keyCode){
 			case KeyCode.Up: player.up = true;
 			case KeyCode.Down: player.down = true;
@@ -62,7 +62,7 @@ class Project {
 		}
 	}
 	
-	public function onKeyUp(keyCode:Int){
+	public function onKeyUp(keyCode:KeyCode){
 		switch (keyCode){
 			case KeyCode.Up: player.up = false;
 			case KeyCode.Down: player.down = false;

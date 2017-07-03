@@ -59,7 +59,7 @@ class Project {
 		}
 	}
 
-	public function onKeyDown(keyCode:Int){
+	public function onKeyDown(keyCode:KeyCode){
 		switch (keyCode){
 			case KeyCode.B: setBlueState();
 			case KeyCode.R: setRedState();

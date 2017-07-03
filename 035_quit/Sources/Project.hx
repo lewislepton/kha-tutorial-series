@@ -2,7 +2,7 @@ package;
 
 import kha.Framebuffer;
 import kha.System;
-import kha.Key;
+import kha.input.KeyCode;
 import kha.input.Keyboard;
 import kha.input.Mouse;
 
@@ -26,12 +26,9 @@ class Project {
 		}
 	}
 	
-	public function onKeyDown(key:Key, value:String){
-		switch (key){
-			case CHAR:
-			if (value == 'q'){
-				System.requestShutdown();
-			}
+	public function onKeyDown(keyCode:KeyCode){
+		switch (keyCode){
+			case KeyCode.Q:	System.requestShutdown();
 		default: return;
 		}
 	}

@@ -3,7 +3,7 @@ package;
 import kha.Framebuffer;
 import kha.Color;
 import kha.Assets;
-import kha.Key;
+import kha.input.KeyCode;
 import kha.input.Keyboard;
 
 import state.Blue;
@@ -45,7 +45,7 @@ class Project {
 		graphics.end();
 	}
 
-	public function onKeyDown(keyCode:Int){
+	public function onKeyDown(keyCode:KeyCode){
 		switch (keyCode){
 			case KeyCode.B: setBlueState();
 			case KeyCode.R: setRedState();

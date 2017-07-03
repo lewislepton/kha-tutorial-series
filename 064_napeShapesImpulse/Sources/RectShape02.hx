@@ -66,7 +66,7 @@ class RectShape02 {
 		graphics.popTransformation();
 	}
 
-	public function onKeyDown(keyCode:Int){
+	public function onKeyDown(keyCode:KeyCode){
 		switch (keyCode){
 			case KeyCode.Up: up = true;
 			case KeyCode.Down: down = true;
@@ -78,7 +78,7 @@ class RectShape02 {
 		}
 	}
 	
-	public function onKeyUp(keyCode:Int){
+	public function onKeyUp(keyCode:KeyCode){
 		switch (keyCode){
 			case KeyCode.Up: up = false;
 			case KeyCode.Down: down = false;

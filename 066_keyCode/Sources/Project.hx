@@ -28,7 +28,7 @@ class Project {
 		graphics.end();
 	}
 
-	public function onKeyDown(keyCode:Int):Void {
+	public function onKeyDown(keyCode:KeyCode):Void {
 		switch (keyCode){
 			case KeyCode.A: YES = true;
 			case KeyCode.P: NO = true;
@@ -36,7 +36,7 @@ class Project {
 		}
 	}
 
-	public function onKeyUp(keyCode:Int):Void {
+	public function onKeyUp(keyCode:KeyCode):Void {
 		switch (keyCode){
 			case KeyCode.A: YES = false;
 			case KeyCode.P: NO = false;

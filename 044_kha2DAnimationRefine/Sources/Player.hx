@@ -38,7 +38,7 @@ class Player extends Sprite {
 		}
 	}
 
-	public function onKeyDown(keyCode:Int){
+	public function onKeyDown(keyCode:KeyCode){
 		switch (keyCode){
 			case KeyCode.Left: left = true;
 			case KeyCode.Right: right = true;
@@ -46,7 +46,7 @@ class Player extends Sprite {
 		}
 	}
 	
-	public function onKeyUp(keyCode:Int){
+	public function onKeyUp(keyCode:KeyCode){
 		switch (keyCode){
 			case KeyCode.Left: left = false;
 			case KeyCode.Right: right = false;

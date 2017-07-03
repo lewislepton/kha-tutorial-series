@@ -3,6 +3,7 @@ package;
 import kha.Framebuffer;
 import kha.Color;
 import kha.Assets;
+import kha.input.KeyCode;
 import kha.input.Keyboard;
 
 import Player;
@@ -29,11 +30,11 @@ class Project {
 		graphics.end();
 	}
 
-	public function onKeyDown(keyCode:Int){
+	public function onKeyDown(keyCode:KeyCode){
 		player.onKeyDown(keyCode);
 	}
 
-	public function onKeyUp(keyCode:Int){
+	public function onKeyUp(keyCode:KeyCode){
 		player.onKeyUp(keyCode);
 	}
 }

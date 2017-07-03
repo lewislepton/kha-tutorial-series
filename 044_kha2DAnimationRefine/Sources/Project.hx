@@ -30,11 +30,11 @@ class Project {
 		graphics.end();
 	}
 
-	public function onKeyDown(keyCode:Int){
-		player.onKeyDown(key);
+	public function onKeyDown(keyCode:KeyCode){
+		player.onKeyDown(keyCode);
 	}
 
-	public function onKeyUp(keyCode:Int){
+	public function onKeyUp(keyCode:KeyCode){
 		player.onKeyUp(keyCode);
 	}
 }

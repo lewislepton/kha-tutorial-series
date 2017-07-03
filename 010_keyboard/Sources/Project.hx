@@ -17,8 +17,8 @@ class Project {
 		
 	}
 	
-	public function onKeyDown(keyCode:Int):Void {
-		switch (key){
+	public function onKeyDown(keyCode:KeyCode):Void {
+		switch (keyCode){
 			case KeyCode.Up: trace('the UP key is pressed');
 			case KeyCode.Down: trace('the DOWN key is pressed');
 			case KeyCode.A: trace('the A key is pressed');
@@ -26,8 +26,8 @@ class Project {
 		}
 	}
 	
-	public function onKeyUp(key:Key, char:String):Void {
-		switch (key){
+	public function onKeyUp(keyCode:KeyCode):Void {
+		switch (keyCode){
 			case KeyCode.Up: trace('the UP key is not pressed');
 			case KeyCode.Down: trace('the DOWN key is not pressed');
 			case KeyCode.A: trace('the A key is not pressed');
