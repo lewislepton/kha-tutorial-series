@@ -15,7 +15,8 @@ class Player {
   public var down:Bool;
   
   public function new(){
-    
+    this.x = 0;
+    this.y = 0;
   }
 
   public function update(){
