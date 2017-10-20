@@ -1,7 +1,7 @@
 package;
 
 import kha.Framebuffer;
-import kha.Key;
+import kha.input.KeyCode;
 import kha.input.Keyboard;
 import kha.input.Gamepad;
 
@@ -55,22 +55,22 @@ class Project {
 		graphics.end();
 	}
 	
-	public function onKeyDown(key:Key, char:String){
-		switch (key){
-			case UP: player.up = true;
-			case DOWN: player.down = true;
-			case LEFT: player.left = true;
-			case RIGHT: player.right = true;
+	public function onKeyDown(keyCode:KeyCode):Void {
+		switch (keyCode){
+			case KeyCode.Up: player.up = true;
+			case KeyCode.Down: player.down = true;
+			case KeyCode.Left: player.left = true;
+			case KeyCode.Right: player.right = true;
 		default: return;
 		}
 	}
-	
-	public function onKeyUp(key:Key, char:String){
-		switch (key){
-			case UP: player.up = false;
-			case DOWN: player.down = false;
-			case LEFT: player.left = false;
-			case RIGHT: player.right = false;
+
+	public function onKeyUp(keyCode:KeyCode):Void {
+		switch (keyCode){
+			case KeyCode.Up: player.up = false;
+			case KeyCode.Down: player.down = false;
+			case KeyCode.Left: player.left = false;
+			case KeyCode.Right: player.right = false;
 		default: return;
 		}
 	}

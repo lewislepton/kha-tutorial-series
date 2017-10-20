@@ -1,7 +1,7 @@
 package;
 
 import kha.Framebuffer;
-import kha.Key;
+import kha.input.KeyCode;
 import kha.input.Keyboard;
 import kha.System;
 
@@ -52,12 +52,9 @@ class Project {
 		graphics.end();
 	}
 	
-	public function onKeyDown(key:Key, char:String):Void {
-		switch (key){
-			case CHAR:
-				if (char == ' '){
-					startTime = System.time;
-				}
+	public function onKeyDown(keyCode:KeyCode):Void {
+		switch (keyCode){
+			case KeyCode.Space: startTime = System.time;
 		default: return;
 		}
 	}
