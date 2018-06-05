@@ -3,7 +3,7 @@ using kha.graphics2.GraphicsExtension;
 import kha.Color;
 import kha.Assets;
 import kha.Image;
-import kha.Key;
+import kha.input.KeyCode;
 
 import nape.space.Space;
 import nape.geom.Vec2;
@@ -66,28 +66,26 @@ class RectShape02 {
 		graphics.popTransformation();
 	}
 
-	public function onKeyDown(key:Key, char:String){
-		switch (key){
-			case UP: up = true;
-			case DOWN: down = true;
-			case LEFT: left = true;
-			case RIGHT: right = true;
-			case CHAR:
-				if (char == 'q') leftRotate = true;
-				if (char == 'j') rightRotate = true;
+	public function onKeyDown(keyCode:KeyCode){
+		switch (keyCode){
+			case KeyCode.Up: up = true;
+			case KeyCode.Down: down = true;
+			case KeyCode.Left: left = true;
+			case KeyCode.Right: right = true;
+			case KeyCode.Q: leftRotate = true;
+			case KeyCode.J: rightRotate = true;
 		default: return;
 		}
 	}
 
-	public function onKeyUp(key:Key, char:String){
-		switch (key){
-			case UP: up = false;
-			case DOWN: down = false;
-			case LEFT: left = false;
-			case RIGHT: right = false;
-			case CHAR:
-				if (char == 'q') leftRotate = false;
-				if (char == 'j') rightRotate = false;
+	public function onKeyUp(keyCode:KeyCode){
+		switch (keyCode){
+			case KeyCode.Up: up = false;
+			case KeyCode.Down: down = false;
+			case KeyCode.Left: left = false;
+			case KeyCode.Right: right = false;
+			case KeyCode.Q: leftRotate = false;
+			case KeyCode.J: rightRotate = false;
 		default: return;
 		}
 	}
