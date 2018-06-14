@@ -4,7 +4,7 @@ import kha.graphics2.Graphics;
 using kha.graphics2.GraphicsExtension;
 import kha.Color;
 import kha.Assets;
-import kha.Key;
+import kha.input.KeyCode;
 import kha.input.Keyboard;
 
 import kha2d.Animation;
@@ -41,18 +41,18 @@ class Char extends Sprite {
 		}
 	}
 
-	public function onKeyDown(key:Key, char:String){
-		switch (key){
-			case LEFT: left = true;
-			case RIGHT: right = true;
+	public function onKeyDown(keyCode:KeyCode):Void {
+		switch (keyCode){
+			case KeyCode.Left: left = true;
+			case KeyCode.Right: right = true;
 		default: return;
 		}
 	}
 
-	public function onKeyUp(key:Key, char:String){
-		switch (key){
-			case LEFT: left = false;
-			case RIGHT: right = false;
+	public function onKeyUp(keyCode:KeyCode):Void {
+		switch (keyCode){
+			case KeyCode.Left: left = false;
+			case KeyCode.Right: right = false;
 		default: return;
 		}
 	}
