@@ -29,7 +29,7 @@ class Project {
 	public var firePos:Float;
 
 	public function new() {
-		ui = new Zui(Assets.fonts.quicksand, 18);
+		ui = new Zui({font: Assets.fonts.quicksand});
 
 		thunderSound = Audio.play(Assets.sounds.thunder, true);
 		thunderSound.pause();
@@ -56,20 +56,20 @@ class Project {
 
 	public function gui(graphics:Graphics){
 		ui.begin(graphics);
-		if (ui.window(Id.window(), 0, 0, 200, HEIGHT)){
-			if (ui.node(Id.node(), 'thunder', 1 , true)){
-				thunderSound.volume = ui.slider(Id.slider(), 'volume', 0.0, 1.0, true);
-				playThunder = ui.check(Id.check(), 'off/on');
+		if (ui.window(Id.handle(), 0, 0, 200, HEIGHT)){
+			if (ui.panel(Id.handle(), 'thunder', 1 , true)){
+				thunderSound.volume = ui.slider(Id.handle(), 'volume', 0.0, 1.0, true);
+				playThunder = ui.check(Id.handle(), 'off/on');
 			}
 
-			if (ui.node(Id.node(), 'rain', 1 , true)){
-				rainSound.volume = ui.slider(Id.slider(), 'volume', 0.0, 1.0, true);
-				playRain = ui.check(Id.check(), 'off/on');
+			if (ui.panel(Id.handle(), 'rain', 1 , true)){
+				rainSound.volume = ui.slider(Id.handle(), 'volume', 0.0, 1.0, true);
+				playRain = ui.check(Id.handle(), 'off/on');
 			}
 
-			if (ui.node(Id.node(), 'fire', 1 , true)){
-				fireSound.volume = ui.slider(Id.slider(), 'volume', 0.0, 1.0, true);
-				playFire = ui.check(Id.check(), 'off/on');
+			if (ui.panel(Id.handle(), 'fire', 1 , true)){
+				fireSound.volume = ui.slider(Id.handle(), 'volume', 0.0, 1.0, true);
+				playFire = ui.check(Id.handle(), 'off/on');
 			}
 		}
 		ui.end();
