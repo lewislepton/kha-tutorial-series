@@ -5,6 +5,8 @@ you can find the playlist for the tutorial series [HERE](https://www.youtube.com
 
 no comments exist in the code, purely because we are working with video.
 
+any third party ttf files will not be in the projects. you will need to supply your own ttf files
+
 PATREON
 ------
 if you like the work done for this series [plus others], there is a [PATREON](https://www.patreon.com/lewislepton) available which helps support & keep the channel alive.<br>
