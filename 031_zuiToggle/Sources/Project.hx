@@ -18,7 +18,7 @@ class Project {
 	public var block:Block;
 	
 	public function new() {
-		ui = new Zui(Assets.fonts.Abel_Regular, 32);
+		ui = new Zui({font:Assets.fonts.arial});
 		block = new Block();
 	}
 
@@ -50,10 +50,10 @@ class Project {
 	
 	public function gui(graphics:Graphics){
 		ui.begin(graphics);
-		if (ui.window(Id.window(), 0, 0, 300, 300)){
-			if (ui.node(Id.node(), 'node', 0, true)){
+		if (ui.window(Id.handle(), 0, 0, 300, 300)){
+			if (ui.panel(Id.handle(), 'node', 0, true)){
 				button = ui.button('BUTTON');
-				toggle = ui.check(Id.check(), 'size change');
+				toggle = ui.check(Id.handle(), 'size change');
 			}
 		}
 		ui.end();
