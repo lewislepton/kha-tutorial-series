@@ -58,8 +58,10 @@ class Project {
 	}
 
 	public function render(framebuffer:Framebuffer):Void {
-		backbuffer.g2.begin();
-		backbuffer.g2.pipeline = pipeline;
+		
+		backbuffer.g4.begin();
+		backbuffer.g4.setPipeline(pipeline);
+		
 		backbuffer.g4.setVector2(resolutionID, resolution);
 		backbuffer.g4.setVector2(mouseID, mouse);
 		backbuffer.g4.setFloat(timeID, Scheduler.time());
@@ -67,10 +69,14 @@ class Project {
 		backbuffer.g4.setFloat(redID, red);
 		backbuffer.g4.setFloat(greenID, green);
 		backbuffer.g4.setFloat(blueID, blue);
+		backbuffer.g4.end();
 
+
+		backbuffer.g2.begin();
+		backbuffer.g2.pipeline = pipeline;
 		backbuffer.g2.fillRect(0, 0, Main.WIDTH, Main.HEIGHT);
-		backbuffer.g2.pipeline = null;
 		backbuffer.g2.end();
+		
 
 		framebuffer.g2.begin();
 		Scaler.scale(backbuffer, framebuffer, System.screenRotation);
